@@ -3,9 +3,29 @@
         <div class="navbar-inner">
             <div class="container">
                 <a class="brand" href="/"></a>
-                <div class="pull-right">
+                <div class="navbar pull-right">
                     <ul class="nav">
                         {% if request.user.is_authenticated() %}
+                        <li class="dropdown header-box">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                App.net Pages
+                                <i class='icon-chevron-down'></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="https://omega.app.net"><i class="menu-icon icon-comments"></i> Omega</a>
+                                </li>
+                                <li>
+                                    <a href="https://broadcast.app.net/manage/"><i class="menu-icon icon-bolt"></i> Broadcast</a>
+                                </li>
+                                <li>
+                                    <a href="https://directory.app.net/"><i class="menu-icon icon-book"></i> Apps</a>
+                                </li>
+                                <li>
+                                    <a href="https://directory.app.net/"><i class="menu-icon icon-group"></i> Accounts</a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="dropdown header-box">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 {{ request.user.username }}
@@ -16,13 +36,16 @@
                                     <a href="{{ url_for('user_detail_view', args=[request.user.username]) }}">Profile</a>
                                 </li>
                                 <li>
+                                    <a href="https://account.app.net/settings/">Settings</a>
+                                </li>
+                                <li>
                                     <a href="{{ url_for('logout') }}">Log out</a>
                                 </li>
                             </ul>
                         </li>
                         {% else %}
                         <li>
-                            <a href="{{ url_for('login', url_params={'next': request.build_absolute_uri() }) }}">Log in</a>
+                            <a href="{{ url_for('login', url_params={'next': request.build_absolute_uri() }) }}">Log In</a>
                         </li>
                         {% endif %}
                     </ul>
