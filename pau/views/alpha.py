@@ -251,7 +251,6 @@ class PauPostsView(PauStreamBaseView):
     template_name = 'pau/user/posts.html'
     page_title = 'Posts - App.net'
     page_description = 'My Posts on App.net'
-    show_new_post_box = False
     requires_auth = False
     selected_nav_page = 'posts'
 
