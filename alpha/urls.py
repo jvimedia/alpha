@@ -14,6 +14,7 @@ user_patterns = patterns(
     url(r'^followers/$', 'pau.views.alpha.follows_to', name='follows_to'),
     url(r'^following/$', 'pau.views.alpha.follows_from', name='follows_from'),
     url(r'^stars/$', 'pau.views.alpha.stars_from_user', name='stars_from_user'),
+    url(r'^posts/$', 'pau.views.alpha.posts_from_user', name='posts_from_user'),
 )
 
 urlpatterns = patterns(

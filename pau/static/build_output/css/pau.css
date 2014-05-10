@@ -7424,8 +7424,23 @@ html.breakpoint-tablet .post-container .post-header {
   .user-container .username {
     color: #4a484c; }
   .user-container .verified {
-    cursor: inherit; }
-    .user-container .verified .text {
+    cursor: inherit;
+    color: #6eba43; 
+    font-size: 17px; 
+    padding: 15px;
+    margin: -15px;
+    margin-bottom: 5px;}
+     .verified:hover { 
+      color:#5c9c38; }
+     .user-container .verified .text {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .user-container .purplapp {
+    cursor: inherit;
+    color: rgba(128, 86, 214, 0.8); 
+    font-size: 17px; }
+     .purplapp:hover {
+      color: #8056d6; }
+     .user-container .purplapp .text {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .user-container .rss-link-container {
     margin: 0;
@@ -7762,23 +7777,28 @@ footer {
     border-bottom: 1px solid #eeeeee; }
   .follow-details .follow-to,
   .follow-details .follow-from,
-  .follow-details .stars-from {
+  .follow-details .stars-from, 
+  .follow-details .posts-from {
     margin-bottom: 5px; }
     .follow-details .follow-to a,
     .follow-details .follow-from a,
-    .follow-details .stars-from a {
+    .follow-details .stars-from a, 
+    .follow-details .posts-from a {
       color: #898d90; }
       .follow-details .follow-to a strong,
       .follow-details .follow-from a strong,
-      .follow-details .stars-from a strong {
+      .follow-details .stars-from a strong,
+      .follow-details .posts-from a strong {
         color: #6f7477; }
       .follow-details .follow-to a:hover,
       .follow-details .follow-from a:hover,
-      .follow-details .stars-from a:hover {
+      .follow-details .stars-from a:hover,
+      .follow-details .posts-from a:hover {
         color: #ce5640; }
         .follow-details .follow-to a:hover strong,
         .follow-details .follow-from a:hover strong,
-        .follow-details .stars-from a:hover strong {
+        .follow-details .stars-from a:hover strong,
+        .follow-details .posts-from a:hover strong {
           color: #ce5640; }
 
 .follow-btn {

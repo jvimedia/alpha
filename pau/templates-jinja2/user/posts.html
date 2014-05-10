@@ -1,0 +1,16 @@
+{% extends 'pau/stream.html' %}
+
+{% block hero %}
+{% set user_detail_url = url_for('user_detail_view', args=[owner.username]) %}
+    <div class="hero-unit collapse-right">
+        <div class="yui3-g">
+        	<div class="yui3-u-3-5">
+            		<div class="colored-circle alpha-heading-icon"><i class="icon-archive"></i></div>
+            		<div class="alpha-heading">Posts</div>
+       		</div>
+		<div class="yui3-u-2-5 m-yui3-u-1 ta-right">
+			<p class="info-right muted"><a href="{{user_detail_url}}">@{{owner.username|possessive}}</a> posts</p>
+        	</div>
+	</div>
+    </div>
+{% endblock %}

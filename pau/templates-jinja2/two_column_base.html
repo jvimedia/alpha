@@ -46,7 +46,14 @@
                                 {{ nav_menu_item('mentions', 'hand-right', 'Mentions', url_for('mentions')) }}
                                 {{ nav_menu_item('interactions', 'exchange', 'Interactions', url_for('interactions')) }}
                                 {{ nav_menu_item('stars', 'star', 'Stars', url_for("stars_from_user", args=[request.user.username])) }}
+				{{ nav_menu_item('posts', 'archive', 'Posts', url_for("posts_from_user", args=[request.user.username])) }}
                             </ul>
+			    <ul class='nav nav-list m-yui3-u-none nav-vertically-responsive'>
+				<li class='nav-header'>Purplapp</li>
+				<li><a href='http://purplapp.eu/user.php?id={{user.username}}' target='_blank'>Your User Information</a></li>		
+                                <li><a href='http://purplapp.eu/pca.php?id={{user.username}}' target='_blank'>Your PCA Information</a></li> 
+                                <li><a href='http://purplapp.eu/account/mention.php?id1={{user.username}}' target='_blank'>First Mention Information</a></li>  
+			    </ul>
                             <ul class='nav nav-list m-yui3-u-none nav-vertically-responsive'>
                                 <li class='nav-header'>Explore</li>
                                 {% for stream in explore_streams %}
