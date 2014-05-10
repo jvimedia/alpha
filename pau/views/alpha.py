@@ -246,6 +246,31 @@ class PauMentionsView(PauStreamBaseView):
 
 mentions = PauMentionsView.as_view(stream_function=bridge.mentions_stream)
 
+class PauPostsView(PauStreamBaseView):
+
+    template_name = 'pau/user/posts.html'
+    page_title = 'Posts - App.net'
+    page_description = 'My Posts on App.net'
+    show_new_post_box = False
+    requires_auth = False
+    selected_nav_page = 'posts'
+
+    def get_stream_object(self, request, *args, **kwargs):
+        owner_username = kwargs.get('username', '')
+        owner = bridge.get_user_by_username(request, owner_username)
+        self.view_ctx['owner'] = owner
+        return owner
+
+    def populate_context(self, request, *args, **kwargs):
+        super(PauPostsView, self).populate_context(request, *args, **kwargs)
+        meta_description = u'%s\'s posts on App.net' % (self.view_ctx['owner'].username)
+        self.view_ctx['page_title'] = meta_description
+        self.view_ctx['page_description'] = meta_description
+        self.view_ctx.update_ctx({
+            '__js_page_load_hooks': ['post_create.init']
+        })
+
+posts_from_user = PauPostsView.as_view(stream_function=bridge.get_posts_for_user)
 
 class PauStarsFromUserView(PauStreamBaseView):
 
@@ -414,7 +439,8 @@ class PauUserDetailView(PauStreamBaseView):
         self.view_ctx['owner_description'] = owner_description
         self.view_ctx['owner'] = owner
         self.view_ctx['owner_name'] = owner.get('name', '')
-        self.view_ctx['num_followers'] = owner['counts']['followers']
+        self.view_ctx['num_posts'] = owner['counts']['posts']
+	self.view_ctx['num_followers'] = owner['counts']['followers']
         self.view_ctx['num_following'] = owner['counts']['following']
         self.view_ctx['num_starred'] = owner['counts']['stars']
         self.view_ctx['verified_domain'] = owner.get('verified_domain')

@@ -2,6 +2,10 @@
 
 {% macro stats_details() %}
 <div class='yui3-u-1'>
+    <div class='posts-from yui3-u-1 va-middle'>
+        <a href='{{ url_for("posts_from_user", args=[username]) }}'><strong class="transition-color">{{num_posts|intcomma}}</strong><span class='text'> Posts</span></a>
+    </div>    
+    <hr>
     <div class='stars-from yui3-u-1 va-middle'>
         <a href='{{ url_for("stars_from_user", args=[username]) }}'><strong class="transition-color">{{num_starred|intcomma}}</strong><span class='text'> Starred</span></a>
     </div>
@@ -58,6 +62,7 @@
     <i class="icon-ok-sign"></i>
     <span class='text'> {{verified_domain}}</span>
 </a>
+<br>
 {% endmacro %}
 
 {% block before_main_content %}
@@ -78,9 +83,14 @@
                                 <a href="{{url_for('user_detail_view', args=[username])}}" class='username p-nickname' title="User Id {{owner.id}}">{{ username }}</a><small class='p-name'>{{ owner_name }}</small>
                             </h1>
                             {% if verified_domain %}{{verification()}}{% endif %}
-                        </div>
+                            <a class="yui3-u u-url purplapp pointer" href="http://purplapp.eu/user.php?id={{username}}" rel="me nofollow" target="_blank">
+                                <i class="fa fa-info-circle"></i>
+                                <span class='text'> {{owner_name}} on Purplapp</span>
+			    </a>
+			</div>
                         <div class="yui3-u-2-3 t-yui3-u-3-5 m-yui3-u-1">
-                            <div class="user-description subpixel">
+                            <br>
+			    <div class="user-description subpixel">
                                 <span class='user-description-text'>{{ owner_description|render_presenters }}</span>
                             </div>
                         </div>
@@ -135,3 +145,4 @@
     </div>
 {% endif %}
 {% endblock %}
+
