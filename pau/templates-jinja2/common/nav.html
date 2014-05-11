@@ -44,7 +44,7 @@
                             </ul>
                         </li>
                         {% else %}
-                        <li>
+                        <li class="dropdown header-box">
                             <a href="{{ url_for('login', url_params={'next': request.build_absolute_uri() }) }}">Log In</a>
                         </li>
                         {% endif %}

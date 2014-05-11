@@ -185,7 +185,7 @@ PUBLIC_API_ROOT = os.environ.get('PUBLIC_API_ROOT', 'https://api.app.net')
 SOCIAL_AUTH_APPDOTNET_OAUTH_BASE = os.environ.get('SOCIAL_AUTH_APPDOTNET_OAUTH_BASE', 'https://account.app.net')
 SOCIAL_AUTH_APPDOTNET_KEY = os.environ.get('SOCIAL_AUTH_APPDOTNET_KEY')
 SOCIAL_AUTH_APPDOTNET_SECRET = os.environ.get('SOCIAL_AUTH_APPDOTNET_SECRET')
-PARENT_HOST = os.environ.get('PARENT_HOST', 'app.net')
+PARENT_HOST = os.environ.get('PARENT_HOST', 'alpha.jvimedia.org')
 
 # When users aren't authroized this app token is the fallback token used for API calls
 APP_TOKEN = os.environ.get('APP_TOKEN')
