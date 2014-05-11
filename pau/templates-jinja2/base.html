@@ -20,8 +20,8 @@
         {% endif %}
 
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-        <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
-        <link href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+        <link href='https://jvimedia.org/static/font-awesome-4.0.3/css/font-awesome.css' rel='stylesheet' type='text/css'>
+        <link href='https://jvimedia.org/static/font-awesome-3.2.1/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
         {% block extra_header %}
         {% endblock %}
@@ -33,7 +33,7 @@
             {# This is for emoticons #}
             /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
             window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
-            grunticon(["//d39zheejy3ckol.cloudfront.net/emoji/423105160813/icons/icons.data.svg.css", "//d39zheejy3ckol.cloudfront.net/emoji/423105160813/icons/icons.data.png.css", "//d39zheejy3ckol.cloudfront.net/emoji/423105160813/icons/icons.fallback.css"]);
+            grunticon(["https://jvimedia.org/static/emoji/icons.data.svg.css", "https://jvimedia.org/static/emoji/icons.data.png.css", "https://jvimedia.org/static/emoji/icons.fallback.css"]);
             </script>
             <noscript><link href="icons.fallback.css" rel="stylesheet"></noscript>
         {% endblock %}
@@ -58,16 +58,16 @@
 
         {% block javascript %}
             {%- if DEBUG -%}
-                <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+                <script type="text/javascript" src="https://jvimedia.org/static/jquery/1.11.1/jquery-1.11.1.js"></script>
             {%- else -%}
-                <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                <script type="text/javascript" src="https://jvimedia.org/static/jquery/1.11.1/jquery-1.11.1.min.js"></script>
             {%- endif -%}
             <script src="/pau-static/build_output/js/pau.js" type="text/javascript" ></script>
         {% endblock %}
 
         {% block post_javascript %}
             {# This is for emoticons #}
-            <script type="text/javascript" src='//d39zheejy3ckol.cloudfront.net/emoji/423105160813/emoji_replace.min.js'></script>
+            <script type="text/javascript" src='https://jvimedia.org/static/emoji/emoji_replace.min.js'></script>
         {% endblock %}
 
         {% block analytics %}

@@ -449,14 +449,17 @@ def user_stream(request, *args, **kwargs):
 def user_posts(request, user):
     return api.users_posts(request, user)
 
+
 def mentions_stream(request, user):
     return api.users_mentions(request, user)
+
 
 def get_stars_for_user(request, user):
     return api.users_stars(request, user)
 
 def get_posts_for_user(request, user):
     return api.users_posts(request, user)
+
 
 def hashtags_stream(request, hashtag):
     return api.posts_tag(request, hashtag)
