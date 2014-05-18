@@ -1980,8 +1980,8 @@ table .span24 {
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
   content: "";
-  opacity: 0.3;
-  filter: alpha(opacity=30); }
+  opacity: 1;
+  filter: alpha(opacity=100); }
 
 .dropdown .caret {
   margin-top: 8px;
