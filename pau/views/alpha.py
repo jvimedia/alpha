@@ -439,7 +439,7 @@ class PauUserDetailView(PauStreamBaseView):
         self.view_ctx['owner'] = owner
         self.view_ctx['owner_name'] = owner.get('name', '')
         self.view_ctx['num_posts'] = owner['counts']['posts']
-	self.view_ctx['num_followers'] = owner['counts']['followers']
+    	self.view_ctx['num_followers'] = owner['counts']['followers']
         self.view_ctx['num_following'] = owner['counts']['following']
         self.view_ctx['num_starred'] = owner['counts']['stars']
         self.view_ctx['verified_domain'] = owner.get('verified_domain')
