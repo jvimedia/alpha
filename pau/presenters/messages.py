@@ -25,7 +25,7 @@ class PostCreatePresenter(AbstractPresenter):
         return presenter
 
     def photo_url_template(self):
-        photo_url_template = 'https://photo.app.net/'
+        photo_url_template = 'https://photos.app.net/'
         photo_url_template += '{post_id}/1'
         return photo_url_template
 

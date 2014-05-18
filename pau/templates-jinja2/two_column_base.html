@@ -46,14 +46,16 @@
                                 {{ nav_menu_item('mentions', 'hand-right', 'Mentions', url_for('mentions')) }}
                                 {{ nav_menu_item('interactions', 'exchange', 'Interactions', url_for('interactions')) }}
                                 {{ nav_menu_item('stars', 'star', 'Stars', url_for("stars_from_user", args=[request.user.username])) }}
-				{{ nav_menu_item('posts', 'archive', 'Posts', url_for("posts_from_user", args=[request.user.username])) }}
+                				{{ nav_menu_item('posts', 'archive', 'Posts', url_for("posts_from_user", args=[request.user.username])) }}
                             </ul>
-			    <ul class='nav nav-list m-yui3-u-none nav-vertically-responsive'>
-				<li class='nav-header'>Purplapp</li>
-				<li><a href='http://purplapp.eu/user.php?id={{user.username}}' target='_blank'>Your User Information</a></li>		
+            			    <ul class='nav nav-list m-yui3-u-none nav-vertically-responsive'>
+                				<li class='nav-header'>
+                                    Purplapp
+                                </li>
+                				<li><a href='http://purplapp.eu/user.php?id={{user.username}}' target='_blank'>Your User Information</a></li>		
                                 <li><a href='http://purplapp.eu/account/pca.php?id={{user.username}}' target='_blank'>Your PCA Information</a></li> 
                                 <li><a href='http://purplapp.eu/account/mention.php?id1={{user.username}}' target='_blank'>First Mention Information</a></li>  
-			    </ul>
+            			    </ul>
                             <ul class='nav nav-list m-yui3-u-none nav-vertically-responsive'>
                                 <li class='nav-header'>Explore</li>
                                 {% for stream in explore_streams %}
@@ -72,6 +74,16 @@
                                     <li><a href="http://support.app.net" target="_blank">FAQ</a></li>
                                 </ul>
                             </div>
+<!--                             <div>
+                                <ul class="nav nav-list help-menu m-yui3-u-none nav-vertically-responsive">
+                                    <li class='nav-header'>
+                                        <span>Donate</span>
+                                    </li>
+                                    <li>
+                                        <script id='fbz61pq'>(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='http://api.flattr.com/button/view/?uid=jvimedia&button=compact&url=http%3A%2F%2Falpha.jvimedia.org';f.title='Flattr';f.height=20;f.width=110;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fbz61pq');</script>
+                                    </li>
+                                </ul>
+                            </div> -->
                         </div>
                     </div>
                 </div>
