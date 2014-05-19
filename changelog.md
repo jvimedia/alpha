@@ -1,3 +1,10 @@
+##2015-05-19
+###Additions
++ Open Omega Link in target=_blank
++ Fixed: Purplapp User link in profile
++ Added: Text on login page -- explaining Alpha.jvimedia.org isnt an App.net clone but an alpha.
++ Fixed: Paypal Donation button in left menu
+
 ##2014-05-18
 ###Additions
 - fix post uploads

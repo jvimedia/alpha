@@ -83,7 +83,7 @@
                                 <a href="{{url_for('user_detail_view', args=[username])}}" class='username p-nickname' title="User Id {{owner.id}}">{{ username }}</a><small class='p-name'>{{ owner_name }}</small>
                             </h1>
                             {% if verified_domain %}{{verification()}}{% endif %}
-                            <a class="yui3-u u-url purplapp pointer" href="http://purplapp.eu/user.php?id={{username}}" rel="me nofollow" target="_blank">
+                            <a class="yui3-u u-url purplapp pointer" href="http://purplapp.eu/account/user.php?id={{username}}" rel="me nofollow" target="_blank">
                                 <i class="fa fa-info-circle"></i>
                                 <span class='text'> {{owner_name}} on Purplapp</span>
 			    </a>
