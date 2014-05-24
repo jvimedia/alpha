@@ -66,7 +66,6 @@
             text-indent: -9999px;
             background-position: 0 15px;
             opacity: 0.82;
-            background-image: url(https://d2c01jv13s9if1.cloudfront.net/i/P/z/s/PzsOxrq4a-JieMDU3PhQ9qYy1f8.png);
             -webkit-transition: opacity 0.2s linear;
             -moz-transition: opacity 0.2s linear;
             -o-transition: opacity 0.2s linear;
@@ -91,7 +90,6 @@
         only screen and (                min-resolution: 2dppx) {
 
             .brand {
-                background-image: url(https://d2c01jv13s9if1.cloudfront.net/i/U/z/n/UznyRY5ZEjg0Dw9mcs6NWjt7rN4.png);
             }
 
         }
@@ -122,6 +120,9 @@
                 <hr>
                 <p>You've made too many requests. Please wait a moment before trying again.</p>
                 <p>If this error persists, <a href="http://app.net/contact">please let us know</a>.</p>
+                <div class="simple-sign-up-block">
+                <a href='{{ url_for('login') }}' class='btn btn-primary broadcast-index-button'>Log In</a>
+            </div>
             <span>
         </div>
     </body>
