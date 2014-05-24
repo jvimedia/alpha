@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 import os
 import sys
+import logging
+logging.basicConfig()
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "alpha.settings")

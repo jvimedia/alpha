@@ -1,3 +1,4 @@
+
 import logging
 
 from django.conf import settings
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 def rate_limit_handler(request, *args, **kwargs):
-    response = render_template_response(request, {}, '429.html')
+    response = render_template_response(request, {}, 'pau/429.html')
     response.status_code = 429
     return response
 

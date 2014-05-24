@@ -173,7 +173,7 @@ BUILD_INFO = 'tapp-dev-%d' % int(time.time())
 
 # Pau settings
 SESSION_COOKIE_NAME = 'mt_pau_sessionid'
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 # when unauthenticated users access the alpha app what app token should be used
 # API settings for alpha, we set this separately for smoketests, if this changes, update in settings_smoketest
@@ -185,7 +185,7 @@ PUBLIC_API_ROOT = os.environ.get('PUBLIC_API_ROOT', 'https://api.app.net')
 SOCIAL_AUTH_APPDOTNET_OAUTH_BASE = os.environ.get('SOCIAL_AUTH_APPDOTNET_OAUTH_BASE', 'https://account.app.net')
 SOCIAL_AUTH_APPDOTNET_KEY = os.environ.get('SOCIAL_AUTH_APPDOTNET_KEY')
 SOCIAL_AUTH_APPDOTNET_SECRET = os.environ.get('SOCIAL_AUTH_APPDOTNET_SECRET')
-PARENT_HOST = os.environ.get('PARENT_HOST', 'alpha.jvimedia.org')
+PARENT_HOST = os.environ.get('PARENT_HOST', 'app.net')
 
 # When users aren't authroized this app token is the fallback token used for API calls
 APP_TOKEN = os.environ.get('APP_TOKEN')
