@@ -2,6 +2,8 @@
 
 This is an open-source version of alpha.app.net, the web microblogging client for App.net.
 
+## alpha.jvimedia.org is discontinued.
+
 ## Getting Started
 
 There are a couple of prerequisites for getting Alpha up and running.
